@@ -11,94 +11,82 @@ body {
 }
 
 /* Navigation - Desktop */
-.navbar {
-    background: #2c5530;
+/* --- شريط التنقل الأساسي --- */
+.navbar, .tab-bar, .hamburger {
+    width: 100%;
+    background-color: #333;
     color: white;
-    padding: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar (Laptop) */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
+    padding: 10px 20px;
 }
-
-.navbar .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: bold;
-}
-
 .navbar ul {
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 15px;
 }
-
-.navbar a {
+.navbar ul li a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
-}
-
-.navbar a:hover {
-    background: rgba(255,255,255,0.2);
-}
-
-/* Tab Bar - Tablet */
-.tab-bar {
-    display: none;
-    background: #2c5530;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 10px;
-    justify-content: space-around;
-}
-
-.tab-bar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Hamburger - Mobile */
-.hamburger {
-    display: none;
-    background: #2c5530;
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-    padding: 1rem;
-}
-
-.hamburger div:first-child {
-    cursor: pointer;
     font-weight: bold;
 }
 
+/* Tab Bar (Tablet) */
+.tab-bar {
+    display: none; /* مخفي افتراضيًا */
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: #444;
+}
+.tab-bar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hamburger Menu (Smartphone) */
+.hamburger {
+    display: none; /* مخفي افتراضيًا */
+    flex-direction: column;
+    background-color: #333;
+    padding: 10px 20px;
+}
+.hamburger div:first-child {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
 .hamburger #menu {
     display: none;
     flex-direction: column;
     margin-top: 10px;
 }
-
-.hamburger #menu.show {
-    display: flex;
-}
-
-.hamburger a {
+.hamburger #menu a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 5px 0;
 }
+
+/* --- Media Queries --- */
+
+/* Tablet: 768px - 1024px */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .navbar { display: none; }
+    .tab-bar { display: flex; }
+}
+
+/* Smartphone: أقل من 768px */
+@media (max-width: 767px) {
+    .navbar, .tab-bar { display: none; }
+    .hamburger { display: flex; }
+}
+
 
 /* Main Content */
 body {
@@ -106,17 +94,19 @@ body {
 }
 
 /* Mindset Section */
+/* ارتفاع قسم Build Mindset نصف شاشة اللابتوب */
 .mindset {
-    height: 50vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 50vh; /* يغطي نصف ارتفاع الشاشة */
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* لمحاذاة النص في الوسط عمودياً */
+    align-items: center; /* لمحاذاة النص في الوسط أفقياً */
     text-align: center;
-    color: white;
+    background-color: #f5f5f5; /* لون خلفية مؤقت لتوضيح القسم */
     padding: 20px;
 }
+
+
 
 .mindset h1 {
     font-size: 3rem;
@@ -217,6 +207,13 @@ button:hover {
     background: #1e3a22;
 }
 
+.go-top.right {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1000;
+}
+
 /* Footer */
 footer {
     background: #2c5530;
@@ -240,3 +237,4 @@ footer {
     .mindset h1 { font-size: 2rem; }
     .cards { grid-template-columns: 1fr; }
 }
+
