@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Challenge - Palestine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="top">
+        <div class="logo">
+            <svg width="30" height="20">
+                <rect x="0" y="0" width="30" height="7" fill="black"/>
+                <rect x="0" y="7" width="30" height="6" fill="white"/>
+                <rect x="0" y="13" width="30" height="7" fill="green"/>
+                <polygon points="0,0 0,20 12,10" fill="red"/>
+            </svg>
+            Palestine
+        </div>
+        <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#palestine">Palestine</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#bottom">Bottom</a></li>
+        </ul>
+    </nav>
+
+    <!-- Tab Bar -->
+    <nav class="tab-bar">
+        <a href="#top">Top</a>
+        <a href="#introduction">Intro</a>
+        <a href="#palestine">Palestine</a>
+        <a href="#contact">Contact</a>
+        <a href="#bottom">Bottom</a>
+    </nav>
+
+    <!-- Hamburger Menu -->
+    <nav class="hamburger">
+        <div onclick="toggle()">☰ Palestine</div>
+        <div id="menu">
+            <a href="#top">Top</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#palestine">Palestine</a>
+            <a href="#contact">Contact</a>
+            <a href="#bottom">Bottom</a>
+        </div>
+    </nav>
+
+    <!-- Build Mindset Section -->
+    <section id="introduction" class="mindset">
+        <h1>Build Your Mindset</h1>
+        <p>Discover Palestine's beautiful governorates and rich culture.</p>
+    </section>
+
+    <!-- Palestine Cards -->
+    <section id="palestine">
+        <h2>Palestinian Governorates</h2>
+        <div class="cards">
+            <div class="card">
+                <div class="img">Bethlehem Photo</div>
+                <h3>Bethlehem</h3>
+                <p>Birthplace of Jesus Christ with rich religious heritage.</p>
+            </div>
+            <div class="card">
+                <div class="img"><img src="Hebron.webp" alt="Hebron" style="width:100%;height:auto;"></div>
+                <h3>Hebron</h3>
+                <p>Ancient city with historic Old City and Ibrahimi Mosque.</p>
+            </div>
+            <div class="card">
+                <div class="img">Jenin Photo</div>
+                <h3>Jenin</h3>
+                <p>Northern city known for fertile agricultural lands.</p>
+            </div>
+            <div class="card">
+                <div class="img">Jericho Photo</div>
+                <h3>Jericho</h3>
+                <p>One of world's oldest cities with archaeological sites.</p>
+            </div>
+            <div class="card">
+                <div class="img">Nablus Photo</div>
+                <h3>Nablus</h3>
+                <p>Commercial center famous for soap and knafeh.</p>
+            </div>
+            <div class="card">
+                <div class="img">Qalqilya Photo</div>
+                <h3>Qalqilya</h3>
+                <p>Agricultural region known for citrus groves.</p>
+            </div>
+            <div class="card">
+                <div class="img">Quds Photo</div>
+                <h3>Quds</h3>
+                <p>Holy city with Al-Aqsa Mosque and religious sites.</p>
+            </div>
+            <div class="card">
+                <div class="img">Ramallah Photo</div>
+                <h3>Ramallah</h3>
+                <p>Administrative capital with vibrant cultural life.</p>
+            </div>
+            <div class="card">
+                <div class="img">Deir al-Balah Photo</div>
+                <h3>Deir al-Balah</h3>
+                <p>Central Gaza city known for date palm groves.</p>
+            </div>
+            <div class="card">
+                <div class="img">Gaza Photo</div>
+                <h3>Gaza</h3>
+                <p>Largest Gaza Strip city with ancient coastal heritage.</p>
+            </div>
+            <div class="card">
+                <div class="img">Khan Yunis Photo</div>
+                <h3>Khan Yunis</h3>
+                <p>Second largest Gaza city with agricultural lands.</p>
+            </div>
+            <div class="card">
+                <div class="img">Rafah Photo</div>
+                <h3>Rafah</h3>
+                <p>Southern border city connecting Gaza and Egypt.</p>
+            </div>
+            <div class="card">
+                <div class="img">Tulkarm Photo</div>
+                <h3>Tulkarm</h3>
+                <p>Agricultural center with fertile plains and olives.</p>
+            </div>
+            <div class="card">
+                <div class="img">Tubas Photo</div>
+                <h3>Tubas</h3>
+                <p>Rural northeastern region with farming communities.</p>
+            </div>
+            <div class="card">
+                <div class="img">Salfit Photo</div>
+                <h3>Salfit</h3>
+                <p>Small region famous for olive oil production.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Name" required>
+            <input type="text" placeholder="Subject" required>
+            <input type="tel" placeholder="Phone" required>
+            <input type="email" pattern=".*@ftu\.ac\.th$" placeholder="Email (@ftu.ac.th only)" required>
+            <input type="password" minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" placeholder="Secret Word" required>
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="bottom">
+        <p>&copy; 2025 Palestine Project. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
